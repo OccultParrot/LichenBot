@@ -172,9 +172,9 @@ async def on_message(message: discord.Message):
     if message.channel.id != client.listened_channel.id or message.author.id == client.user.id:
         return
     if not client.voice_client:
-        await message.channel.send(
-            content="I am not currently in a voice channel. Use the `/join_vc` command to have me join your voice channel.",
-            delete_after=10)
+    #    await message.channel.send(
+    #        content="I am not currently in a voice channel. Use the `/join_vc` command to have me join your voice channel.",
+    #        delete_after=10)
         return
 
     if len(message.content) > 200:
